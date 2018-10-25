@@ -1,0 +1,32 @@
+<!--Kirjoita ohjelma, joka kysyy käyttäjältä lompakossa olevan rahamäärän ja bussilipun
+hinnan. Jos rahat riittävät bussilippuun, ohjelma vähentää lompakosta bussilipun hinnan ja
+toivottaa hyvää matkaa. Lopuksi (riittivätpä rahat tai ei) ohjelma ilmoittaa lompakkoon jäävän rahamäärän. (3p)
+
+Tallenna lompakossa olevaa rahamäärä omaan muuttujaansa. Muuttujan arvoa tulee vähentää silloin,
+jos bussilippu ostetaan. Muussa tapauksessa muuttujan arvoa ei saa muuttaa.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+<script>
+  'use strict';
+  let rahat;
+  let lippu;
+  rahat = +prompt('Paljonko lompakossa on rahaa?:');
+  lippu = +prompt('Kuinka paljon bussilippu maksaa?:');
+
+  if (lippu <= rahat){
+    rahat = rahat - lippu;
+    document.write('Hyvää matkaa!');
+  }
+  else if (lippu > rahat){
+    document.write('Rahasi eivät riitä.')
+  }
+  document.write('Lompakossasi on ' + rahat + ' euroa.');
+
+</script>
+</body>
+</html>

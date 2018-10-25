@@ -1,0 +1,35 @@
+<!--Kirjoita ohjelma, joka kysyy vuosiluvun ja ilmoittaa,
+onko annettu vuosi karkausvuosi. (4p)
+
+Vuosi on karkausvuosi, jos se on jaollinen neljällä. Sadalla jaolliset
+vuodet ovat karkausvuosia vain jos ne ovat jaollisia myös neljälläsadalla..-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+<script>
+  'use strict';
+  let vuosi;
+  vuosi = +prompt('Vuosiluku: ');
+
+  if (vuosi%4 == 0) {
+    if (vuosi%100 == 0) {
+      if (vuosi%400 == 0) {
+        document.write('Vuosi ' + vuosi + ' on karkausvuosi.');
+      } else {
+        document.write('Vuosi ' + vuosi + ' ei ole karkausvuosi.');
+      }
+    } else {
+      document.write('Vuosi ' + vuosi + ' on karkausvuosi.');
+    }
+  } else {
+    document.write('Vuosi ' + vuosi + ' ei ole karkausvuosi.');
+  }
+
+
+</script>
+</body>
+</html>

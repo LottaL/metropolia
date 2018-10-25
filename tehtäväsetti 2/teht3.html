@@ -1,0 +1,42 @@
+<!--3 .Kirjoita ohjelma, joka kysyy käyttäjän sukupuolen ja hemoglobiiniarvon (g/l). Ohjelma ilmoittaa,
+onko hemoglobiiniarvo alhainen, normaali vai korkea. (3p)
+
+Naisen normaali hemoglobiiniarvo on välillä 117-175 g/l.
+Miehen normaali hemoglobiiniarvo on välillä 134-195 g/l..-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+<script>
+  'use strict';
+  let sp;
+  let hemppari;
+  sp = prompt('Sukupuoli F/M:');
+  hemppari = +prompt('Hemoglobiiniarvo:');
+
+    if (sp == 'F' || sp == 'f'){
+      if (hemppari > 117 && hemppari < 175) {
+        document.write('Onneksi olkoon, hemoglobiinisi on viitearvojen sisällä!')
+      } else if (hemppari < 117){
+        document.write('Hemoglobiinisi on alhainen.')
+      } else {
+        document.write('Hemoglobiinisi on koholla.')
+      }
+    }
+    else if (sp == 'M' || sp == 'm'){
+      if (hemppari > 134 && hemppari < 195) {
+        document.write('Onneksi olkoon, hemoglobiinisi on viitearvojen sisällä!')
+      } else if (hemppari < 134){
+        document.write('Hemoglobiinisi on alhainen.')
+      } else {
+        document.write('Hemoglobiinisi on koholla.')
+      }
+    }
+
+
+</script>
+</body>
+</html>
