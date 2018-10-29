@@ -1,0 +1,34 @@
+<!--7. Kirjoita ohjelma, joka arpoo bingolapun numerot ja tulostaa ne pienimmästä suurimpaan. Bingolapussa
+ on 25 numeroa alla olevan säännön mukaisesti: (3p)
+
+yleisesti n:s luku on jokin luvuista 4n-3, 4n-2, 4n-1 ja 4n. (kun n on välillä 1, 2, ..., 25)
+Kaavasta seuraa että ensimmäinen luku on jokin luvuista 1, 2, 3 ja 4 ja toinen luku on jokin luvuista 5, 6, 7 ja 8.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+<script>
+  'use strict';
+  let n, neg, luku;
+  var bingo = new Array(25);
+
+  for (n = 0; n < bingo.length; n++) {
+    neg = Math.floor((Math.random() * 3) + 0);
+    luku = 4 * (n + 1) - neg;
+    bingo[n] = luku;
+  }
+
+  for (n = 0; n < bingo.length; n++) {
+    document.write(bingo[n] + ' | ');
+    if ((n + 1) % 5 == 0) {
+      document.write('<br>');
+    }
+  }
+
+</script>
+</body>
+</html>
