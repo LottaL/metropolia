@@ -1,0 +1,37 @@
+<!--2. Kirjoita ohjelma, joka kysyy käyttäjältä osallistujien määrän. Tämän jälkeen ohjelma kysyy kaikkien
+osallistujen nimet. Lopuksi ohjelma tulostaa osallistujien nimet web-sivulle numeroituun luetteloon samassa
+järjestyksessä kuin ne syötettiin. (3p).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<p id="teht2"></p>
+
+<script>
+  'use strict';
+  let osallistujat = [];
+  let maara, n, i;
+  var list, item;
+
+  maara = +prompt('Kuinka monta osallistujaa?');
+
+  for (n = 0; n < maara; n++) {
+    osallistujat[n] = prompt('Anna nimi: ')
+  }
+
+  list = document.createElement('ol');
+
+  for (i = 0; i < osallistujat.length; i++) {
+    item = document.createElement('li');
+    item.appendChild(document.createTextNode(osallistujat[i]));
+    list.appendChild(item);
+  }
+  document.getElementById('teht2').appendChild(list);
+
+</script>
+</body>
+</html>

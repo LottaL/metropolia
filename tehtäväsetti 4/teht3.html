@@ -1,0 +1,37 @@
+<!--3. Kirjoita ohjelma, joka kysyy kuuden koiran nimet. Ohjelma tulostaa koirien nimet
+numeroimattomaan luetteloon käänteisessä aakkosjärjestyksessä. (3p).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<p id="teht3"></p>
+
+<script>
+  'use strict';
+  let koirat = [];
+  let maara = 6, n, i;
+  var list, item;
+
+  for (n = 0; n < maara - 1; n++) {
+    koirat[n] = prompt('Anna koiran nimi: ')
+  }
+
+  koirat.sort();
+  koirat.reverse();
+
+  list = document.createElement('ul');
+
+  for (i = 0; i < koirat.length; i++) {
+    item = document.createElement('li');
+    item.appendChild(document.createTextNode(koirat[i]));
+    list.appendChild(item);
+  }
+  document.getElementById('teht3').appendChild(list);
+
+</script>
+</body>
+</html>

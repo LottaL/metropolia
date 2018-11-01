@@ -1,0 +1,37 @@
+<!--4. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes
+hän antaa nollan. Tämän jälkeen annetut luvut tulostetaan suurimmasta pienimpään. (3p)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<p id="teht4"></p>
+
+<script>
+  'use strict';
+  let luvut = [];
+  let n, i = 0, luku = 1;
+  var list, item;
+
+  while (luku != 0) {
+    luku = +prompt('Anna luku:');
+    luvut[i] = luku;
+    i++;
+  }
+  luvut.sort(function(a, b){return b-a});
+
+  list = document.createElement('ul');
+
+  for (i = 0; i < luvut.length; i++) {
+    item = document.createElement('li');
+    item.appendChild(document.createTextNode(luvut[i]));
+    list.appendChild(item);
+  }
+  document.getElementById('teht4').appendChild(list);
+
+</script>
+</body>
+</html>

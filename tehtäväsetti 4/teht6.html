@@ -1,0 +1,41 @@
+<!--6. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes käyttäjä antaa nollan. Tämän jälkeen
+ohjelma tulostaa annettujen lukujen mediaanin. (3p)
+
+Mediaani on se luku, joka on suuruusjärjestyksessä keskimmäisin.
+Jos lukuja on parillinen määrä, on mediaani kahden suuruusjärjestyksessä keskimmäisen luvun keskiarvo.
+Huomaa, että nolla on vain lopetusmerkki. Sitä ei saa käsitellä mukana olevana lukuna mediaania laskettaessa.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  let luvut = [];
+  let luku = true, i = 0, mediaani;
+
+
+  while (luku != 0) {
+    luku = +prompt('Anna luku: ');
+    if (luku != 0) {
+      luvut[i] = luku;
+      i++;
+    }
+  }
+
+  luvut.sort(function(a, b){return b-a});
+
+  if (luvut.length % 2 == 0) { //parillinen määrä
+    mediaani = luvut[luvut.length / 2] + luvut[(luvut.length / 2) + 1] / 2;
+  } else { //pariton määrä
+    mediaani = luvut[Math.floor(luvut.length/2) + 1];
+  }
+
+  alert('Lukujen mediaani on '+ mediaani);
+
+</script>
+</body>
+</html>

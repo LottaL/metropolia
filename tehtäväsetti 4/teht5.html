@@ -1,0 +1,36 @@
+<!--5. Kirjoita ohjelma, joka kysyy käyttäjältä väliltä 1..1000 olevia lukuja, kunnes hän antaa uudelleen jonkin
+aiemmin antamansa luvun. Tuolloin ohjelma ilmoittaa, että luku on jo annettu ja lopettaa toimintansa. (3p)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  let arvaukset = [];
+  let numerot = 1000, luku;
+  let i, stop = false;
+
+
+
+  for (i = 0; i < numerot; i++) {
+    arvaukset[i] = false;
+  }
+
+  do {
+    luku = +prompt('Anna luku: ');
+    if (arvaukset[luku] == false) {
+      arvaukset[luku] = true;
+    } else {
+      stop = true;
+    }
+  } while (stop == false);
+
+  alert('Luku on jo annettu!');
+
+</script>
+</body>
+</html>

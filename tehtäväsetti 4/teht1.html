@@ -1,0 +1,29 @@
+<!--1. Kirjoita ohjelma, joka kysyy käyttäjältä viisi lukua ja tulostaa ne vastakkaisessa järjestyksessä kuin ne syötettiin. (2p)
+
+Tehtävä on ratkaistava taulukkomuuttujan avulla.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+<script>
+  'use strict';
+  let luku, n;
+  let maara = 5;
+  let luvut = [];
+
+  for (n = 0; n < maara; n++) {
+    luku = +prompt('Anna luku: ')
+    luvut[n] = luku;
+    luku = 0;
+  }
+
+  for (n = maara - 1; n >= 0; n--) {
+    document.write(luvut[n] + ' <br> ');
+  }
+
+</script>
+</body>
+</html>

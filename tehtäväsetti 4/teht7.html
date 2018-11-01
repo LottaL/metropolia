@@ -1,0 +1,62 @@
+<!--7. Kirjoita alla olevan kuvauksen mukainen äänestysohjelma pienimuotoiseen kokouskäyttöön. (3p)
+
+Ohjelma kysyy ehdokkaiden lukumäärän. Jos ehdokkaita on esimerkiksi 5, saavat he äänestysnumerot
+1, 2, ..., 5. (Tämän jälkeen ehdokkaat voisivat sopia keskenään ja ilmoittaa äänestäjille, mikä on
+kunkin ehdokkaan äänestysnumero.)
+
+Ohjelma kysyy äänestäjien lukumäärän.
+Ohjelma kysyy vuoron perään kultakin äänestäjältä, ketä tämä äänestää. Jos äänestäjä syöttää äänestysnumeron
+sijasta nollan, tulkitaan se tyhjäksi ääneksi.
+Ohjelma ilmoittaa vaalien voittajan (eli hänen äänestysnumeronsa).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  let aanet = [];
+  let ehdokkaat = [];
+  let tulokset = [];
+  let ehdokasmaara, aanestajamaara, aani;
+  let i, voittaja, largest = 0, n = 1;
+
+  ehdokasmaara = +prompt('Anna ehdokkaiden lukumäärä: ');
+
+  for (i = 0; i < ehdokasmaara; i++) {
+    ehdokkaat[i] = n;
+    tulokset[i] = 0;
+    n++;
+  }
+
+  aanestajamaara = prompt('Anna äänestäjien lukumäärä: ');
+
+  for (i = 0; i < aanestajamaara; i++) {
+    aani = +prompt('Anna äänestysnumerosi: ');
+    aanet[i] = aani;
+  }
+
+  for (i = 0; i < ehdokasmaara; i++) {
+    for (n = 0; n < aanestajamaara; n++) {
+      if (ehdokkaat[i] == aanet[n]) {
+        tulokset[i]++;
+      }
+    }
+  }
+
+  for ( i = 1; i < tulokset.length; i++ ) {
+    if ( tulokset[i] > tulokset[largest] ) {
+      largest = i;
+    }//sekoaa jos tulee tasapeli...
+  }
+
+  voittaja = largest + 1;
+
+  alert('Äänestyksen voittaa numero '+ voittaja);
+
+</script>
+</body>
+</html>
