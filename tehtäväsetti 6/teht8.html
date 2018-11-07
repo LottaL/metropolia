@@ -1,0 +1,29 @@
+<!--8. Kirjoita rekursiivinen funktio Fibonaccin lukujonon laskemiseksi. Fibonaccin
+lukujonossa seuraava alkio lasketaan kahden edellisen summana. Jono alkaa 1, 1, 2, 3, 5, 8, 13, ...
+Käyttäjältä kysytään, monennenko Fibonaccin lukujonossa esiintyvän luvun hän haluaa, ja ohjelma
+tulostaa tuon luvun. (3p)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  let mones, i = 1;
+
+  function fibonacci(luku) {
+    if (luku <= 1)
+      return luku;
+    else
+      return  fibonacci(luku - 1) + fibonacci(luku - 2);
+  }
+
+  mones = +prompt('Kuinka monennen luvun Fibonaccin lukujonosta haluat?');
+  alert(fibonacci(mones));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!--1. Yhdysvalloissa bensiinin määrä mitataan yleensä gallonoina (tarkkaan ottaen nestegallonoina).
+Kirjoita funktio muunnos(), joka kysyy käyttäjältä bensamäärän gallonoina, muuntaa sen litroiksi ja
+tulostaa litramäärän. Kirjoita funktion kutsu pääohjelmaan. (2p)
+
+Yksi gallona on 3,785 litraa.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  function muunnos() {
+    let gallona, litra;
+
+    gallona = +prompt('Anna bensan määrä gallonissa: ')
+
+    litra = gallona/3.785;
+    alert(gallona + ' gallonaa on litroissa ' + litra + ' litraa.')
+    ;
+  }
+
+  muunnos();
+
+</script>
+</body>
+</html>

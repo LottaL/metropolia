@@ -1,0 +1,28 @@
+<!--2. Kirjoita funktio muunnos(), joka saa parametrina gallonamäärän, muuntaa gallonat litroiksi ja
+palauttaa paluuarvonaan litramäärän. Kirjoita myös pääohjelma, joka kysyy käyttäjältä gallonamäärän,
+kutsuu funktiota muunnos() ja tulostaa funktion palauttaman litramäärän. (2p)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  let gallona;
+
+  function muunnos(bensa) {
+    let litra = gallona/3.785;
+    return litra;
+  }
+
+  gallona = +prompt('Anna bensan määrä gallonissa: ')
+  alert(gallona + ' gallonaa on litroissa ' + muunnos(gallona) + ' litraa.')
+
+
+</script>
+</body>
+</html>

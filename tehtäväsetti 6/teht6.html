@@ -1,0 +1,36 @@
+<!--6. Kirjoita funktio vastaluvuksi(), joka saa parametrinaan lukuja sisältävän taulukon.
+Funktio muuttaa kaikki taulukon luvut vastaluvuiksi. Funktio ei palauta paluuarvoa. (3p)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  let luvut = [1, 8, -3, 0, 7, -5], i;
+
+  function vastaluvuksi(lista) {
+    // KOKEILUA alert(lista);
+    for (i = 0; i < lista.length; i++) {
+      if (lista[i] < 0) {
+        lista[i] = Math.abs(lista[i]);
+      } else if (lista[i] > 0) {
+        lista[i] = -lista[i];
+      } else {
+        lista[i] = lista[i];
+      }
+    }
+    //KOKEILUA alert(lista);
+  }
+
+  //Pääohjelma testaamista varten, listan sisältö määritelty alussa
+  vastaluvuksi(luvut);
+
+
+</script>
+</body>
+</html>

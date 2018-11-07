@@ -1,0 +1,28 @@
+<!--3. Kirjoita funktio itseisarvo(), joka palauttaa paluuarvonaan parametrina saamansa luvun
+itseisarvon. Kirjoita myös pääohjelma. joka kysyy käyttäjältä luvun, kutsuu funktiota itseisarvo()
+ja tulostaa saamansa itseisarvon. (2p)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  let luku, tulos;
+
+  function itseisarvo(arvo) {
+    tulos = Math.abs(arvo);
+    return tulos;
+  }
+
+  luku = +prompt('Anna luku: ');
+  alert('Antamasi luvun ' +luku + ' itseisarvo on ' + itseisarvo(luku));
+
+
+</script>
+</body>
+</html>

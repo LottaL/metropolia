@@ -1,0 +1,37 @@
+<!--5. Kirjoita funktio liitä(), joka saa parametrinaan merkkijonoja sisältävän taulukon. Funktio
+palauttaa merkkijonon, joka on muodostettu liittämällä taulukon alkiot toisiinsa. (2p)
+
+Esimerkki: Kolmialkioisessa taulukossa on alkiot Viivi, Saara ja Yrjö-Pekka. Funktio palauttaa
+merkkijonon ViiviSaaraYrjö-Pekka.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  let x, y, z, summa, nimet = [];
+
+  function liitä(lista) {
+    summa = lista.join('');
+    return summa;
+  }
+
+  //Pääohjelma testaamista varten
+  x = prompt('Anna nimi: ');
+  nimet.push(x);
+  y = prompt('Anna nimi: ');
+  nimet.push(y);
+  z = prompt('Anna nimi: ');
+  nimet.push(z);
+
+  alert(liitä(nimet));
+
+
+</script>
+</body>
+</html>

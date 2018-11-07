@@ -1,0 +1,37 @@
+<!--4. Kirjoita funktio, joka palauttaa kolmesta parametreina saamastaan luvusta suurimman. Kirjoita
+myös pääohjelma. joka kysyy käyttäjältä kolme lukua, kutsuu kirjoittamaasi funktiota ja tulostaa
+paluuarvona saamansa suurimman luvun. (2p)
+
+Huomaa, että kaksi lukua tai jopa kaikki luvut saattavat olla yhtäsuuria. Tällöinkin ohjelman on toimittava oikein.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+  let x, y, z, suurin, luvut = [];
+
+  function vertaa(lista) {
+    lista.sort(function(a, b){return b-a});
+    suurin = lista[0];
+    return suurin;
+  }
+
+  x = +prompt('Anna luku: ');
+  luvut.push(x);
+  y = +prompt('Anna luku: ');
+  luvut.push(y);
+  z = +prompt('Anna luku: ');
+  luvut.push(z);
+
+  alert('Antamistasi luvuista ' + vertaa(luvut) + ' on suurin.');
+
+
+</script>
+</body>
+</html>
