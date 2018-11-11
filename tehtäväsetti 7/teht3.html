@@ -1,0 +1,30 @@
+<!--/*teht3.html (4p)
+Tee laskin, jossa on yhteenlasku, vähennys, kerto- ja jakolasku.
+teht3.html sisältää kaksi tekstikenttää, joihin syötetään numerot, jotka lasketaan yhteen,
+vähennetään, kerrotaan tai jaetaan, riippuen siitä mitä nappia käyttäjä painaa. Vastaus
+tulostetaan <p id="vastaus"> elementin sisälle.
+Jotta luvuilla voidaan laskea, tekstikenttien arvot pitää muuttaa numeroiksi unaarisella
+operaattorilla tai esim. parseFloat -funktiolla, koska tekstikenttien tyyppi on merkkijono.
+Tekstikenttien sisällön voi lukea value -attribuutilla (element.value).
+Jos haluat haastetta, vaihda nappien tilalle alasvetovalikko, josta valitaan laskun tyyppi. + 2p
+Tai vielä haasteellisemmasa versiossa tee vain yksi tekstikenttä, johon kirjoitat laskun.
+Tässä voit käyttää apuna esim includes ja split -metodeja sekä switch -lausetta + 4p*/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" name="numero1" id="num1">
+    <br>
+    <input type="number" name="numero2" id="num2">
+    <br>
+    <button id="sum">Yhteenlasku</button>
+    <button id="sub">Vähennyslasku</button>
+    <button id="multi">Kertolasku</button>
+    <button id="div">Jakolasku</button>
+    <p id="vastaus"></p>
+    <script src="js/teht3.js"></script>
+</body>
+</html>
