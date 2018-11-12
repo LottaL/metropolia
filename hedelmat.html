@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hedelmätehtävä</title>
+</head>
+<body>
+
+<ul class="fruits">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li data-foodtype="squishy">Orange</li>
+    <li>Pear</li>
+    <li>Kiwi</li>
+    <li id="berry">Strawberry</li>
+</ul>
+
+<script>
+    'use strict';
+//1. Use getElementById() to find the <li> element that contains the word "Strawberry".
+// Print out both the html element and the innerHTML. Change the background color of the list element to red.
+    console.log('Tehtävä 1');
+    var mansikka = document.getElementById('berry');
+    mansikka.style.backgroundColor = 'red';
+    console.log(mansikka);
+    console.log(mansikka.innerHTML);
+
+//2. Now find the <li> element that contains the word Orange. Use the QuerySelector() method with a CSS [attribute=value] Selector.
+// Change the background color of the list element to orange.
+    var appelsiini = document.querySelector('[data-foodtype = squishy]');
+    appelsiini.style.backgroundColor = 'orange';
+
+//3.1 - Use getElementsByTagName() to return a collection of all the <li>elements in the document.
+// Use console.log to see that it is a HTMLCollection with 6 child elements. Study the HTMLCollection.
+    console.log('Tehtävä 3.1');
+    const hedelmat = document.getElementsByTagName('li');
+    console.log(hedelmat);
+
+//3.2 - Use a for loop to print out the name of the fruits from the previous collection.
+// In the loop, change the background color of the list element containing "Pear" to green.
+// Give the <li>elements a width of 100px and change the list-style-type to none to remove the bullets.
+    console.log('Tehtävä 3.2');
+    let i;
+    for (i = 0; i < hedelmat.length; i++) {
+      console.log(hedelmat[i]);
+      hedelmat[i].style.listStyleType = 'none';
+      hedelmat[i].style.width = '100px';
+      if (hedelmat[i].textContent == 'Pear') {
+        hedelmat[i].style.backgroundColor = 'green';
+      }
+    }
+//4.1 - Use QuerySelectorAll() to return a collection of all the <li>elements in the document.
+// Use console.log to see that it actually is a NodeList with 6 child elements.
+    console.log('Tehtävä 4.1');
+    const hedelmanode = document.querySelectorAll('li');
+    console.log(hedelmanode);
+
+//4.2 - Use forEach() to iterate over the list and print out the name of the fruits.
+// Add borders around each <li>element.
+    console.log('Tehtävä 4.2');
+    hedelmanode.forEach(function(e){
+      console.log(e);
+      e.style.border = '1px solid black';
+    });
+
+
+</script>
+
+</body>
+</html>
