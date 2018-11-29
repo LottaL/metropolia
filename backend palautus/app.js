@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
-const app = express();
 
 const database = require('./modules/database');
 const resize = require('./modules/resize');
@@ -73,7 +72,7 @@ app.use('/upload', (req, res) => {
 app.use(bodyParser.urlencoded({extended: true}));
 
 const db = require('./modules/database');
-const connection = db.connect();
+const dbconnection = db.connect();
 
 passport.serializeUser((user, done) => {
   console.log('serialize: ' + user);
