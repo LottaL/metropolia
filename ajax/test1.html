@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img>
+
+<script>
+  console.log('skripti alkaa');
+  const xhr = new XMLHttpRequest();
+  // XMLHttpRequest-olio, joka hoitaa kommunikaation clientin ja serverin välillä
+  xhr.open('get', 'https://raw.githubusercontent.com/ilkkamtk/WebTekniikatJaDigitaalinenMedia/master/JavaScript/img/dataUrlExample.txt', false);
+  // Kerrotaan XMLHttpRequest-oliolle metodi ja osoite, johon pyyntö lähetetään sekä vaihdetaan toiminta synkroniseksi (false)
+  xhr.send(null);
+  // Lähetetään pyyntö
+
+  if (xhr.status === 200) {                               // Jos osoite löytyi, eli pyyntö on onnistunut,
+    document.querySelector('img').src = xhr.responseText;
+    // asetetaan <img>-elementin src attribuutin arvoksi ladattu sisältö, joka tässä tapauksessa on dataURL-muotoinen kuva
+    console.log('synkroninen lataus valmis');
+  }
+
+  console.log('skripti päättyy');
+</script>
+
+</body>
+</html>

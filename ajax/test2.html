@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img>
+
+<script>
+  console.log('skripti alkaa');
+  const xhr = new XMLHttpRequest();
+  xhr.open('get', 'https://raw.githubusercontent.com/ilkkamtk/WebTekniikatJaDigitaalinenMedia/master/JavaScript/img/dataUrlExample.txt', true);
+  // Kerrotaan XMLHttpRequest-oliolle metodi ja osoite, johon pyyntö lähetetään sekä vaihdetaan toiminta synkroniseksi (true)
+  xhr.onreadystatechange = naytaKuva;
+  // Kuunnellaan muutoksia latauksen tilassa, ja aina kun muutoksia tapahtuu ajetaan naytaKuva-funktio
+  xhr.send(null);
+  // Lähetetään pyyntö
+
+  function naytaKuva() {
+    if (xhr.readyState === 4 && xhr.status === 200) {         // Jos lataus on valmis ja osoite löytyi
+      document.querySelector('img').src = xhr.responseText;   // asetetaan <img>-elementin src attribuutin arvoksi ladattu sisältö, joka tässä tapauksessa on dataURL-muotoinen kuva
+      console.log('asynkroninen lataus valmis');
+    }
+  }
+
+  console.log('skripti päättyy');
+</script>
+
+</body>
+</html>
