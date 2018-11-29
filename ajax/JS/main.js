@@ -67,7 +67,7 @@ function search(param) {
       let shows = array[i];
       var show = document.createElement("ul");
       var name = '<li><h2>' + shows.name + '</h2></li>';
-      var link = '<li><a href="' + shows.link +'" class="button">Go to web page</a></li>';
+      var link = '<li><a href="' + shows.link +'" class="button" target="_blank" rel="noopener">Go to web page</a></li>';
       var image = '<li><img class="poster" src="' + shows.image + '"></li>';
       var summary = '<li><p>Summary:</p>' + shows.summary + '</li>';
       var genre = '<li><p class="genre">Genres: ' + shows.genres + '</p></li>';
