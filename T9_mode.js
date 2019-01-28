@@ -11,11 +11,10 @@ let count2 = 1;
 numbers.sort(function(a, b){return a-b});
 console.log(numbers.sort(function(a, b){return a-b}));
 
-//console.log('mode' + mode(numbers));
-mode(numbers);
+console.log('mode: ' + mode(numbers));
 
 //palauttaa yhden mode-arvon, vaikka niitä olisi monta
-//kopioitu netistä
+//mukailtu stack overflow'sta
 function mode(array)
 {
   if(array.length === 0) {
@@ -32,35 +31,11 @@ function mode(array)
     }
     else{
       modemap[num]++;
-    if (modemap[num] > max) {
-      modenro = num;
-      max = modemap[num];
-    }
-  }
-  }
-  return modenro;
-}
-
-//oma räpellys, ei toimi
-function mode2(array) {
-  console.log('start function');
-  let modes = [{amount:0, num:""}];
-  for(let i = 0; i < array.length; i++) {
-    let count = 1;
-    console.log(array[i]);
-    if (array[i] === array[i++]) {
-      count++;
-    } else {
-      console.log('next not '+array[i]+ ' count is '+count);
-      if (count > modes[0].amount) {
-        modes[0].amount = count;
-        modes[0].num = array[i];
-        console.log('biggerthan '+modes);
-      } else if (count === modes[0].amount) {
-        let newmode = {amount:count, num:array[i]};
-        modes.push(newmode);
-        console.log('equals '+modes)
+      if (modemap[num] > max) {
+        modenro = num;
+        max = modemap[num];
       }
     }
   }
+  return modenro;
 }
