@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="CSS/bad.css">
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<div id="header">Welcome to Inaccessible Website</div>
+<div class="nav" id="uppernav"></div>
+<div class="container">
+    <div class="textbox left nav" id="lowernav">
+        <ul>
+            <li><a href='http://users.metropolia.fi/~lottalau/labrat/main'>Go to front page</a></li>
+            <li><a href='http://users.metropolia.fi/~lottalau/labrat/content.html'>What am I reading about again?</a></li>
+            <li><a href='http://users.metropolia.fi/~lottalau/labrat/form.html'>Get more information</a></li>
+        </ul>
+    </div>
+    <div class="textbox middle" id="main">
+        <p class="bad" style="font-weight: bold">Subscribe</p>
+        <p>Fill in the form and hit green to begin subscription!</p>
+        <div id="form">
+            <form id="subscribe">
+                First name:
+                <br>
+                <input type="text" name="firstname">
+                <br>
+                Last name:
+                <br>
+                <input type="text" name="lastname">
+                <br>
+                Email:
+                <br>
+                <input type="text" name="email" required>
+                <br>
+                How did you hear from us:
+                <br>
+                <select name="how" form="subscribe">
+                    <option value="here">Here</option>
+                    <option value="there">There</option>
+                    <option value="IDK">IDK</option>
+                    <option value="nottelling">Not telling you</option>
+                </select>
+                <br><br>
+                <input type="reset" value=" " style="width: 10vh; height: 8vh; border-radius: 4vh; background-color: red">
+                <input type="submit" value=" " style="width: 10vh; height: 8vh; border-radius: 4vh; background-color: #00e600">
+            </form>
+            <img src="IMG/sample.jpg" style="height: 60vh; width: 40vh; float: right">
+        </div>
+        <div id="terriblegrid">
+            <p>Peter Person</p> <p>123-456789</p> <p>peter.person@inaccessible.com</p>
+            <p>William Worker</p> <p>345-123456</p> <p>william.worker@@inaccessible.com</p>
+            <p>Dina Developer</p> <p>890-8765432</p> <p>dina.developer@@inaccessible.com</p>
+        </div>
+    </div>
+    <div class="textbox right" id="info">
+        <img src="IMG/some.jpg" style="width: 100%; height: auto">
+        <p class="bad" style="font-weight: bold">Follow us on social media:</p>
+        <p class="bad">
+            IG: @inaccessible
+        </p>
+        <p class="bad">
+            FB: Inaccessible
+        </p>
+        <img src="IMG/wheels.jpg" style="width: 100%; height: auto">
+    </div>
+</div>
+
+<script src="JS/bad.js"></script>
+</body>
+</html>

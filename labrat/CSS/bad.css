@@ -1,0 +1,139 @@
+body, html {
+    height: 100%;
+    font-family: 'Domine', serif;
+}
+
+html {
+    background: url(../IMG/greenbackground.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#header {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #90da49;
+    font-size: 5vh;
+    padding: 2vh;
+    width: 90vw;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#uppernav {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #90da49;
+    width: 90vw;
+    margin: auto;
+}
+
+#uppernav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2vh;
+    width: 50%;
+    margin: 1vh;
+}
+
+ul li {
+    padding: 1vh;
+}
+
+.container {
+    display: flex;
+    text-align: justify;
+    width: 91vw;
+    justify-content: space-evenly;
+    margin: auto;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+.textbox {
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 1vh;
+    width: 20vw;
+    padding: 1vh;
+}
+
+.middle {
+    width: 50vw;
+    background-color: white;
+}
+
+iframe {
+    width: 48vw;
+    height: 27vw;
+    margin: auto;
+    box-sizing: border-box;
+    }
+
+ul {
+    list-style-type: none;
+    padding: 1vh;
+}
+
+.nav a {
+    font-size: 2.5vh;
+    color: #90da49;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#form {
+    width: 48%;
+}
+
+.help {
+    display: block;
+    background-image: url(../IMG/help.png);
+    background-size: 100% 100%;
+    width: 9vh;
+    height: 9vh;
+    position: absolute;
+    top: 0;
+    right: 5vw;
+
+    animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    from { transform: translate3d(0, 0, 0);     }
+    to   { transform: translate3d(0, 12vh, 0); }
+}
+
+#form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    text-align: left;
+}
+
+#terriblegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: solid black 2px;
+}
+
+#terriblegrid p {
+    margin: 0;
+    border: solid black 1px;
+}
+
+.switch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4vh;
+    height: 4vh;
+    background-color: green;
+}

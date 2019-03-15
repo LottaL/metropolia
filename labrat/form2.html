@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscribe to a newsletter</title>
+    <link rel="stylesheet" href="CSS/good.css">
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v3.2"></script>
+
+<div id="header">Welcome to Accessible Website</div>
+<div class="nav" id="uppernav"></div>
+<div class="container">
+    <div class="textbox left">
+        <h1>Navigation</h1>
+        <div class="nav" id="lowernav">
+        </div>
+    </div>
+    <div class="textbox middle" id="main">
+        <h1>Subscribe our newsletter</h1>
+            <form id="subscribe">
+                Fill in the form and press "subscribe" to get monthly news on Web Accessibility.
+                <br>
+                <br>
+                First name:
+                <br>
+                <input type="text" name="firstname">
+                <br>
+                Last name:
+                <br>
+                <input type="text" name="lastname">
+                <br>
+                Email *:
+                <br>
+                <input type="text" name="email" aria-describedby="required-description" required>
+                <br>
+                How did you hear from us:
+                <br>
+                <select name="how" form="subscribe">
+                    <option value="here">Here</option>
+                    <option value="there">There</option>
+                    <option value="IDK">IDK</option>
+                    <option value="nottelling">Not telling you</option>
+                </select>
+                <br><br>
+                <input type="reset" id="reset" value="Reset form">
+                <input type="submit" id="subscribebtn" value="Subscribe">
+            </form>
+    </div>
+    <div class="textbox right" id="info">
+        <img src="IMG/some.jpg" style="width: 100%; height: auto; opacity: 0.7" alt="Different social media platform logos">
+        <p class="bad" style="font-weight: bold">Follow us on social media:</p>
+        <br>
+        <div class="fb-like" data-href="https://www.facebook.com/opiskelijakuntametka/" data-width="100" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+        <blockquote class="embedly-card"><h4><a href="https://www.instagram.com/metkaweb/">Opiskelijakunta METKA (@metkaweb) * Instagram photos and videos</a></h4><p>2,151 Followers, 1,150 Following, 1,166 Posts - See Instagram photos and videos from Opiskelijakunta METKA (@metkaweb)</p></blockquote>
+        <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+    </div>
+</div>
+
+<script src="JS/good.js"></script>
+</body>
+</html>
